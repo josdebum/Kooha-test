@@ -12,9 +12,6 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case AppRoutes.signup:
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
-
-
-
       default:
         return MaterialPageRoute<dynamic>(
           builder: (_) => Scaffold(

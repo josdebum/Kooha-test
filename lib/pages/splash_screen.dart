@@ -17,10 +17,10 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   Future<void> loadApp(BuildContext context) async {
     Future.delayed(
-      const Duration(milliseconds: 1000),
-          () async {
-        await
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+      const Duration(milliseconds: 3000),
+      () async {
+        await Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) {
           return const SignUpScreen();
         }));
       },
@@ -34,7 +34,6 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   @override
-
   @override
   Widget build(BuildContext context) {
     loadApp(context);

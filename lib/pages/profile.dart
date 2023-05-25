@@ -16,14 +16,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
     SizeConfig.init(context);
     return Scaffold(
         backgroundColor: kBackground,
-        body: SafeArea(child:SingleChildScrollView(child:Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
-
-            child:Column(
-                //mainAxisAlignment: MainAxisAlignment.center,
-                children:  <Widget>[   Padding(
-                    padding: EdgeInsets.only( top: 0.h),
-                    child:  const Align(
-                        alignment: Alignment.topLeft,
-                        child: Text("Profile", style: TextStyle(color: kWhite, fontSize: 24,
-                            fontFamily: "Satoshi", fontWeight: FontWeight.w700),))),])))));}}
+        body: SafeArea(
+            child: SingleChildScrollView(
+                child: Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
+                    child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Padding(
+                              padding: EdgeInsets.only(top: 0.h),
+                              child: const Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Text(
+                                    "Profile",
+                                    style: TextStyle(
+                                        color: kWhite,
+                                        fontSize: 24,
+                                        fontFamily: "Satoshi",
+                                        fontWeight: FontWeight.w700),
+                                  ))),
+                        ])))));
+  }
+}

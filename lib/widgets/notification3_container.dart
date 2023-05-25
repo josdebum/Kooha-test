@@ -19,61 +19,70 @@ class _Notification3ContainerState extends State<Notification3Container> {
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children:[
+      children: [
         Container(
-        //  width: double.infinity,
-          padding: const EdgeInsets.only(top: 16, bottom: 24, ),
+          //  width: double.infinity,
+          padding: const EdgeInsets.only(
+            top: 16,
+            bottom: 24,
+          ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:[
-
+            children: [
               SvgPicture.asset("assets/svgs/kooha.svg"),
-
               const SizedBox(width: 16),
               Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:[
+                children: [
                   Container(
-                   width: 280.w,
+                    width: 280.w,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
                       color: const Color(0xff333333),
                     ),
                     padding: const EdgeInsets.all(10),
-                    child:  SizedBox(
+                    child: SizedBox(
                       width: 274.w,
-                      child:  RichText(
-                        text:  TextSpan(
-
-                          style: TextStyle(  fontSize: 14,
+                      child: RichText(
+                        text: TextSpan(
+                          style: const TextStyle(
+                            fontSize: 14,
                             //fontFamily: "Satoshi",
-                            fontWeight: FontWeight.w400,),
+                            fontWeight: FontWeight.w400,
+                          ),
                           children: <TextSpan>[
-                            TextSpan(text: "Your payment of ",
-
+                            const TextSpan(
+                                text: "Your payment of ",
                                 style: TextStyle(
-                                    color:  Color(0xfff8a80d), fontWeight: FontWeight.w400)
-
-                            ),
-                            TextSpan(text: "₦", style: TextStyle(fontFamily: GoogleFonts.inter().fontFamily,
-                              color:  Color(0xfff8a80d),)),
-                            TextSpan(text: "32,500 has been refunded to your bank account.",
+                                    color: Color(0xfff8a80d),
+                                    fontWeight: FontWeight.w400)),
+                            TextSpan(
+                                text: "₦",
                                 style: TextStyle(
-                              color:  Color(0xfff8a80d),fontFamily: "Satoshi", )),
-
+                                  fontFamily: GoogleFonts.inter().fontFamily,
+                                  color: const Color(0xfff8a80d),
+                                )),
+                            const TextSpan(
+                                text:
+                                    "32,500 has been refunded to your bank account.",
+                                style: TextStyle(
+                                  color: Color(0xfff8a80d),
+                                  fontFamily: "Satoshi",
+                                )),
                           ],
-                        ),),
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 6),
                   const Text(
                     "Apr 20, 2022 | 04:05 AM",
                     style: TextStyle(
-                      color:  Color(0xff666666),
+                      color: Color(0xff666666),
                       fontSize: 10,
                       fontFamily: "Satoshi",
                       fontWeight: FontWeight.w500,
@@ -85,5 +94,6 @@ class _Notification3ContainerState extends State<Notification3Container> {
           ),
         ),
       ],
-    )
-    ;}}
+    );
+  }
+}

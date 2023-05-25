@@ -3,11 +3,12 @@ import 'package:kooha_test/core/utils/size_config/extensions.dart';
 import 'package:kooha_test/core/utils/size_config/size_config.dart';
 
 class BrowseContainer extends StatefulWidget {
-  const BrowseContainer( {Key? key, required this.title, })
-      : super(key: key);
+  const BrowseContainer({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
 
   final String title;
-
 
   @override
   State<BrowseContainer> createState() => _BrowseContainerState();
@@ -20,14 +21,20 @@ class _BrowseContainerState extends State<BrowseContainer> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xff333333), width: 1, ),
+        border: Border.all(
+          color: const Color(0xff333333),
+          width: 1,
+        ),
       ),
-      padding:  EdgeInsets.symmetric(horizontal: 22.w, vertical: 14.h, ),
+      padding: EdgeInsets.symmetric(
+        horizontal: 22.w,
+        vertical: 14.h,
+      ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children:[
+        children: [
           Text(
             widget.title,
             textAlign: TextAlign.center,
@@ -40,4 +47,6 @@ class _BrowseContainerState extends State<BrowseContainer> {
           ),
         ],
       ),
-    );}}
+    );
+  }
+}
