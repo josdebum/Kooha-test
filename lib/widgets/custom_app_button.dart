@@ -1,8 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:kooha_test/core/utils/size_config/extensions.dart';
-
-
 
 class AppButton extends StatelessWidget {
   final void Function()? onTap;
@@ -30,50 +27,44 @@ class AppButton extends StatelessWidget {
       required this.buttonColor,
       required this.textColor,
       required this.hasBorder,
-        this.loadingIcon = false,
+      this.loadingIcon = false,
       this.borderColor = Colors.transparent,
-        this.hasPadding =false,
-        this.fontSize = 16 })
+      this.hasPadding = false,
+      this.fontSize = 16})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: hasPadding ?  EdgeInsets.only(left: 24.w, right: 24.w) : EdgeInsets.zero,
-    child:InkWell(
-      onTap: onTap,
-      child: Container(
-          width: width ?? double.infinity,
-          height: height ?? 62.h,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            border: hasBorder
-                ? Border.all(
-                    color: borderColor,
-                  )
-                : const Border(),
-            color:  buttonColor,
-            borderRadius:  const BorderRadius.all(Radius.circular(40)),
-          ),
-        child:
-
-            Center(
-              child:  Text(
-                text,
-                textAlign: TextAlign.center,
-                style:  TextStyle(
-                    color: textColor,
-                    fontSize: fontSize,
-                    fontFamily: "Satoshi",
-                    fontWeight: FontWeight.w700
-                ),
+        padding: hasPadding
+            ? EdgeInsets.only(left: 24.w, right: 24.w)
+            : EdgeInsets.zero,
+        child: InkWell(
+          onTap: onTap,
+          child: Container(
+              width: width ?? double.infinity,
+              height: height ?? 62.h,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                border: hasBorder
+                    ? Border.all(
+                        color: borderColor,
+                      )
+                    : const Border(),
+                color: buttonColor,
+                borderRadius: const BorderRadius.all(Radius.circular(40)),
               ),
-
-
-
-
-        )
-      ),
-    ));
+              child: Center(
+                child: Text(
+                  text,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: textColor,
+                      fontSize: fontSize,
+                      fontFamily: "Satoshi",
+                      fontWeight: FontWeight.w700),
+                ),
+              )),
+        ));
   }
 }
