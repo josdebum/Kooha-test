@@ -1,3 +1,3 @@
-# kooha_test
+# kooha_app
 
 An Entertainment application built using flutter.
